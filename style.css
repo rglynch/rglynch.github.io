@@ -1,0 +1,559 @@
+/* ============================================================
+   style.css — rglynch.github.io
+   Clean academic portfolio
+   ============================================================ */
+
+/* --- Reset & base ------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+/* --- Layout container -------------------------------------- */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Navigation -------------------------------------------- */
+nav {
+  background: #1a2940;
+  border-bottom: 3px solid #2c5f8a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-name {
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #b8cce0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* --- Page header ------------------------------------------- */
+.page-header {
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 0;
+}
+
+.page-header + section h2 {
+  margin-top: 1rem;
+}
+
+.page-header h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin-bottom: 0.4rem;
+}
+
+.page-header .subtitle {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* --- Main content ------------------------------------------ */
+main {
+  padding: 2rem 0 4rem;
+}
+
+/* --- Hero (index page) ------------------------------------- */
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin-bottom: 0.5rem;
+}
+
+.hero .tagline {
+  font-size: 1.125rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.hero .intro {
+  font-size: 1rem;
+  color: #333;
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+}
+
+/* --- Section headings -------------------------------------- */
+h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #2c5f8a;
+}
+
+h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a2940;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* --- Links ------------------------------------------------- */
+a {
+  color: #2c5f8a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Publication list -------------------------------------- */
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 1.7;
+}
+
+.pub-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.pub-journal {
+  font-style: italic;
+  color: #444;
+}
+
+.pub-note {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #555;
+  background: #f0f5fa;
+  border-left: 3px solid #2c5f8a;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0 3px 3px 0;
+}
+
+/* --- Skills grid ------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-item {
+  font-size: 0.95rem;
+}
+
+.skill-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #1a2940;
+}
+
+/* --- Tag chips --------------------------------------------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.tag {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  background: #eef3f8;
+  color: #2c5f8a;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  border: 1px solid #c5d8ea;
+}
+
+/* --- Nav cards (index quick-links) ------------------------- */
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-card {
+  display: block;
+  border: 1px solid #dce8f0;
+  border-radius: 5px;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.nav-card:hover {
+  border-color: #2c5f8a;
+  background: #f5f9fc;
+  text-decoration: none;
+}
+
+.nav-card .card-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin-bottom: 0.3rem;
+}
+
+.nav-card .card-desc {
+  font-size: 0.83rem;
+  color: #555;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* --- Notes list -------------------------------------------- */
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notes-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.notes-list li:last-child {
+  border-bottom: none;
+}
+
+.note-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+  min-width: 6rem;
+}
+
+.note-link {
+  font-size: 0.95rem;
+}
+
+/* --- Placeholder box --------------------------------------- */
+.placeholder {
+  border: 2px dashed #ccdde8;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  color: #777;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  background: #fafcfe;
+}
+
+/* --- Collapsible publications (details/summary) ------------ */
+.pub-details {
+  border: 1px solid #dce8f0;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.pub-details summary {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2940;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pub-details summary::-webkit-details-marker { display: none; }
+
+.pub-details summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  color: #2c5f8a;
+  transition: transform 0.15s;
+  display: inline-block;
+}
+
+.pub-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.pub-details[open] summary {
+  border-bottom: 1px solid #dce8f0;
+}
+
+.pub-details > *:not(summary) {
+  padding: 0 1rem;
+}
+
+.pub-details > h3 {
+  padding-top: 1rem;
+}
+
+.pub-list--numbered {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+
+.pub-list--numbered li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.pub-list--numbered li:last-child {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+/* --- Code blocks ------------------------------------------- */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875em;
+  background: #f3f6f9;
+  color: #1a2940;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid #dce8f0;
+}
+
+pre {
+  background: #f3f6f9;
+  border: 1px solid #dce8f0;
+  border-radius: 5px;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0 1rem;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+kbd {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8em;
+  background: #fff;
+  border: 1px solid #b0b8c4;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  color: #333;
+}
+
+/* --- Note body list/ol ------------------------------------- */
+main ol,
+main ul:not(.pub-list):not(.notes-list):not(.nav-links):not(.cv-list):not(.cv-sublist) {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+main ol li,
+main ul:not(.pub-list):not(.notes-list):not(.nav-links):not(.cv-list):not(.cv-sublist) li {
+  margin-bottom: 0.35rem;
+  line-height: 1.7;
+}
+
+/* --- CV lists ---------------------------------------------- */
+.cv-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.cv-list li:last-child {
+  border-bottom: none;
+}
+
+.cv-role {
+  font-weight: 600;
+  color: #1a2940;
+}
+
+.cv-list--talks li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.cv-sublist {
+  list-style: disc;
+  padding-left: 1.3rem;
+  margin-top: 0.4rem;
+}
+
+.cv-sublist li {
+  padding: 0.2rem 0;
+  border-bottom: none;
+  font-size: 0.88rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cv-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+  min-width: 2.5rem;
+}
+
+/* --- Footer ------------------------------------------------ */
+footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* --- Mobile ------------------------------------------------ */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
